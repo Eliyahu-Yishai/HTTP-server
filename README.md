@@ -14,11 +14,12 @@ advance, and each time it needs a thread to handle a client
 connection, it enqueues the request so an available thread in the pool will handle it.
 
 ==files==
-threadpool.c 
+threadpool.c, threadpool.h 
 Threads will be built according to the amount requested from it, and each client request will receive its own thread
 
-server.c
+server.c 
 A server that receives http requests from the client, and writes back to the socket what is required of it
+
 
 ==how to compaile?== 
 gcc -pthread threadpool.c server.c -o server
