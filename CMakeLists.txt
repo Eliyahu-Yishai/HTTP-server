@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.24)
+project(EX3__)
+
+set(CMAKE_C_STANDARD 11)
+set(GCC_COVERAGE_COMPILE_FLAGS "-Wall -pthread")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+
+include_directories(.)
+
+add_executable(EX3__
+        server.c
+        threadpool.c
+        threadpool.h
+        )
+
+
+
